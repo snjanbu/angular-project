@@ -1,0 +1,12 @@
+
+UserName: <input type="text" [(ngModel)]="userName"><br>
+  <button (click)="searchRepository()">Search Repository</button>
+  <br>
+  <div class="bio" *ngIf="response">
+    <p>
+      Name:{{response.name}}<br>
+      LoginName:{{response.login}}<br>
+      Bio:{{response.bio}}<br>
+      Location:{{response.location}}<br>
+    </p>
+  </div>

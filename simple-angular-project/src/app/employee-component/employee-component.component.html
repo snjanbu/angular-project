@@ -1,0 +1,14 @@
+<div class="employee-card">
+ <h3 class="name">{{employee.name}}</h3>
+ <p class="empId">{{employee.empId}}</p>
+ <p class="project">{{employee.project}}</p>
+ <button *ngIf="!buttonEnable" (click)="OnToggle()">Expand</button>
+ <button *ngIf="buttonEnable" (click)="OnToggle()">Collapse</button>
+ <div *ngIf="buttonEnable" class="phoneVisibility">
+ <h1 *ngIf="employee.phone.length" class="phone">Phone
+     <p *ngFor="let item of employee.phone">{{item}}</p>
+ </h1>
+ </div>
+</div>
+<input type="text" [(ngModel)]="textValue"/>
+<p>{{textValue}}</p>
